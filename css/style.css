@@ -1,0 +1,210 @@
+/********  Main ********/
+
+body{
+    font-family: 'Roboto Slab', serif;
+    color: #777777;
+}
+.container {
+    padding: 100px 0;
+    text-align: center;
+}
+header {
+    margin-bottom: 50px;
+}
+.row {
+    margin: 0;
+}
+h2, h3, h4 {
+    color: #000;
+    margin: 15px 0;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+h4 {
+    font-size: 1em;
+    padding-top: 10px;
+}
+p {
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.btn {
+    color: #fff;
+    background-color: #0ed8d6;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    transition: 0.4s;
+    font-weight: 700;
+    border: 3px solid #0ed8d6;
+    margin: 20px;
+    padding: 15px 35px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.btn:hover {
+    color: #0ed8d6;
+    background-color: #fff;
+    border: 3px solid #0ed8d6;
+}
+
+/****** Navigation *****/
+
+.navbar {
+    background-color: transparent;
+}
+.navbar i {
+    color: #fff;
+    font-size: 1.3em;
+}
+.navbar .navbar-toggler {
+    border-color: #fff;
+    cursor: pointer;
+}
+.navbar .navbar-toggler:active {
+    border-color: #fff;
+}
+.navbar .navbar-brand {
+    color: #fff;
+    font-family: 'Droid Serif', sans-serif;
+}
+.navbar.navbar-light .nav-link {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+/*********** Header *******/
+
+.main-header {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/header/pictures_on_the_wall.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.main-header h2 {
+    font-family: 'Droid Serif', sans-serif;
+    color: #fff;
+}
+.main-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+/***************  Services **************/
+
+#services i {
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: #0ed8d6;
+    padding: 15px;
+    color: #fff;
+    margin-bottom: 15px;
+
+}
+
+/****************  Portfolio ***********/
+
+#portfolio {
+    background-color: #f7f7f7;
+}
+#portfolio figcaption {
+    background-color: #fff;
+}
+#portfolio figure{
+    height: 300px;
+    
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+}
+#portfolio .figure1 {
+    background-image: url(../img/portfolio/box_of_cookies.jpg);
+} 
+#portfolio .figure2 {
+    background-image: url(../img/portfolio/chaotic_paint.jpg);
+}
+#portfolio .figure3 {
+    background-image: url(../img/portfolio/chestnut_on_bracket.jpg);
+}
+#portfolio .figure4 {
+    background-image: url(../img/portfolio/child_with_blue_paint.jpg);
+}
+#portfolio .figure5{
+    background-image: url(../img/portfolio/house_with_blue_doors.jpg);
+}
+#portfolio .figure6 {
+    background-image: url(../img/portfolio/typing_on_laptop.jpg);
+}
+
+/***************  Team ***************/
+
+#team figure {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+#team .figure1 {
+    background-image: url(../img/team/man-1.jpg);
+}
+#team .figure2 {
+    background-image: url(../img/team/man-2.jpg);
+}
+#team .figure3 {
+    background-image: url(../img/team/woman-1.jpg);
+}
+#team i {
+    margin: 10px;
+    color: #fff;
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    font-size: 1.2em;
+    transition: 0.4s;
+}
+#team i:hover {
+    background-color: #0ed8d6;   
+}
+#team p {
+    margin: 0;
+}
+
+/*************** Contact *************/
+
+#contact {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/footer/world-map.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#contact h2 {
+    color: #fff;
+}
+#contact p {
+    color: #fff;
+}
+#contact input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    text-transform: uppercase;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+#contact textarea {
+    height: 165px;
+}
+
