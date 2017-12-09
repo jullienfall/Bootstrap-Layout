@@ -4,12 +4,15 @@ body{
     font-family: 'Roboto Slab', serif;
     color: #777777;
 }
-.container {
+.main-container {
     padding: 100px 0;
     text-align: center;
 }
 header {
     margin-bottom: 50px;
+}
+header p {
+    font-style: italic;
 }
 .row {
     margin: 0;
@@ -20,6 +23,7 @@ h2, h3, h4 {
 }
 h2 {
     font-size: 2em;
+    font-weight: 700;
 }
 h3 {
     font-size: 1.5em;
@@ -32,7 +36,7 @@ p {
     font-size: 14px;
     padding-bottom: 10px;
 }
-.btn {
+.btn-my {
     color: #fff;
     background-color: #0ed8d6;
     font-family: 'Montserrat', sans-serif;
@@ -55,26 +59,49 @@ p {
 
 .navbar {
     background-color: transparent;
+    transition: 0.5s ease;
 }
 .navbar i {
     color: #fff;
     font-size: 1.3em;
 }
+.navbar .navbar-toggler:focus {
+    outline: none;
+}
 .navbar .navbar-toggler {
     border-color: #fff;
     cursor: pointer;
 }
-.navbar .navbar-toggler:active {
-    border-color: #fff;
-}
 .navbar .navbar-brand {
     color: #fff;
     font-family: 'Droid Serif', sans-serif;
+    transition: 0.4s;
+}
+.navbar .navbar-brand:focus {
+    color: #fff;
 }
 .navbar.navbar-light .nav-link {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    transition: 0.4s;
+    padding: 10px 20px;
+    font-weight: 400;
+}
+.navbar.navbar-light .nav-link:hover {
+    color: #0ed8d6;
+}
+.navbar .navbar-brand:hover {
+    color: #0ed8d6;
+}
+.drop-menu {
+    background-color: rgba(14,216, 214, 0.7);
+}
+.navbar.navbar-light .nav-link-hover:hover {
+    color: #3a41f5;
+}
+.navbar .navbar-brand-hover:hover {
+    color: #3a41f5;
 }
 
 /*********** Header *******/
@@ -104,12 +131,18 @@ p {
 
 #services i {
     font-size: 30px;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: #0ed8d6;
     padding: 15px;
     color: #fff;
     margin-bottom: 15px;
-
+    border: 2px solid #0ed8d6;
+    transition: all 0.5s;
+}
+#services i:hover {
+    color: #0ed8d6;
+    background-color: #fff;
+    transform: rotate(360deg);
 }
 
 /****************  Portfolio ***********/
@@ -119,13 +152,21 @@ p {
 }
 #portfolio figcaption {
     background-color: #fff;
+    padding: 5px;
+}
+#portfolio figcaption p {
+    font-style: italic;
+}
+#portfolio .column {
+    margin-bottom: 25px;
 }
 #portfolio figure{
     height: 300px;
-    
     margin: 0 auto;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
+    transition: all 0.8s ease;
 }
 #portfolio .figure1 {
     background-image: url(../img/portfolio/box_of_cookies.jpg);
@@ -144,6 +185,25 @@ p {
 }
 #portfolio .figure6 {
     background-image: url(../img/portfolio/typing_on_laptop.jpg);
+}
+#portfolio .mask {
+/*    width: 100%;*/
+    height: 100%;
+    color: #fff;
+    line-height: 300px;
+    background-color: rgba(14, 216, 214, 0.5);
+    font-size: 2.5em;
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+#portfolio .scale-img {
+    overflow: hidden;
+}
+#portfolio figure:hover {
+    transform: scale(1.4);
+}
+#portfolio figure:hover .mask {
+    opacity: 1;
 }
 
 /***************  Team ***************/
@@ -165,22 +225,29 @@ p {
 #team .figure3 {
     background-image: url(../img/team/woman-1.jpg);
 }
-#team i {
-    margin: 10px;
-    color: #fff;
-    background-color: #000;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    line-height: 40px;
-    font-size: 1.2em;
-    transition: 0.4s;
-}
-#team i:hover {
-    background-color: #0ed8d6;   
-}
 #team p {
     margin: 0;
+}
+#team .last-par {
+    padding: 40px 30px 0 30px;
+    margin: 0;
+}
+
+/***** Social media *****/
+
+.social-media {
+    margin: 0 10px;
+    color: #fff;
+    background-color: #000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    line-height: 45px;
+    font-size: 1.3em;
+    transition: 0.4s;
+}
+.social-media:hover {
+    background-color: #0ed8d6;   
 }
 
 /*************** Contact *************/
@@ -200,11 +267,54 @@ p {
     width: 100%;
     margin: 10px 0;
     text-transform: uppercase;
-    padding: 8px;
+    padding: 13px;
     border-radius: 4px;
     border: 1px solid #fff;
 }
+#contact input, textarea:focus {
+    outline: none;
+}
 #contact textarea {
-    height: 165px;
+    height: 195px;
+}
+
+/************  Footer *************/
+
+#footer-container {
+    padding: 20px 0;
+    color: #000;
+}
+#footer-col p{
+    padding: 12px 0;
+    margin: 0;
+}
+#footer-container .policy {
+    text-align: right;
+}
+#footer-container #footer-col ul {
+    margin: 0;
+    padding: 0;
+}
+#footer-container #footer-col li{
+    display: inline-block;
+    padding: 12px 5px;
+    font-size: 14px;
+}
+#footer-container #footer-col a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+#footer-container #footer-col a:hover {
+    color: #0ed8d6;
+}
+@media (max-width: 767px){
+    #footer-col {
+        text-align: center;
+    }
+    #footer-container .policy {
+        text-align: center;
+    }
 }
 
